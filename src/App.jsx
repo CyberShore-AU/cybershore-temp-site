@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WaitlistForm from './components/WaitlistForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
       <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', padding: '0 1.5rem', paddingTop: '80px' }}>
         <div className="container" style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
           <Hero />
-          <WaitlistForm />
         </div>
         <Footer />
       </main>

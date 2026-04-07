@@ -22,9 +22,9 @@ const Hero = () => {
           boxShadow: '0 0 15px rgba(100, 255, 218, 0.2)'
         }}
       >
-        Early Access Coming Soon
+        Launching Soon
       </motion.div>
-      
+
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const Hero = () => {
       >
         CyberShore AU
       </motion.h1>
-      
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const Hero = () => {
           margin: '0 auto',
         }}
       >
-        Protecting the boundaries of your digital ecosystem. We provide state-of-the-art SaaS security solutions tailored for the modern enterprise.
+        Automated cyber hygiene, absolute compliance.
       </motion.p>
     </div>
   );
