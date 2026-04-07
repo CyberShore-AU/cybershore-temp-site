@@ -36,6 +36,7 @@ const Hero = () => {
           background: 'linear-gradient(45deg, var(--text-primary), var(--accent-color))',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
+          whiteSpace: 'nowrap',
         }}
       >
         CyberShore AU
@@ -52,7 +53,8 @@ const Hero = () => {
           margin: '0 auto',
         }}
       >
-        Automated hygiene. Absolute compliance.
+        <span style={{ whiteSpace: 'nowrap' }}>Automated hygiene.</span>{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>Absolute compliance.</span>
       </motion.p>
     </div>
   );
