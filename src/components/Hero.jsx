@@ -52,7 +52,7 @@ const Hero = () => {
           margin: '0 auto',
         }}
       >
-        Automated cyber hygiene, absolute compliance.
+        Automated hygiene. Absolute compliance.
       </motion.p>
     </div>
   );
