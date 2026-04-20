@@ -1,8 +1,23 @@
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.png';
 
-const Hero = () => {
+const Hero = ({ theme }) => {
   return (
     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        style={{ marginBottom: '1.5rem' }}
+      >
+        <img 
+          src={logo} 
+          alt="CyberShore Logo" 
+          className="brand-logo"
+          style={{ height: '120px', width: 'auto' }} 
+        />
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -39,7 +54,7 @@ const Hero = () => {
           whiteSpace: 'nowrap',
         }}
       >
-        CyberShore AU
+        CyberShore
       </motion.h1>
 
       <motion.p

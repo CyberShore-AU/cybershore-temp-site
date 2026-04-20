@@ -1,5 +1,6 @@
 import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   return (
@@ -22,13 +23,22 @@ const Navbar = ({ theme, toggleTheme }) => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px',
           fontSize: '1.5rem',
           fontWeight: 800,
           letterSpacing: '-1px',
           color: 'var(--accent-color)'
         }}
       >
-        CyberShore AU
+        <img 
+          src={logo} 
+          alt="CyberShore Logo" 
+          className="brand-logo"
+          style={{ height: '32px', width: 'auto' }} 
+        />
+        CyberShore
       </motion.div>
       
       <motion.button 

@@ -7,7 +7,7 @@ const Footer = () => {
       color: 'var(--text-secondary)',
       marginTop: 'auto'
     }}>
-      <p>&copy; {new Date().getFullYear()} CyberShore AU. All rights reserved. Securing the Digital Coastline.</p>
+      <p>&copy; {new Date().getFullYear()} CyberShore. All rights reserved. Securing the Digital Coastline.</p>
     </footer>
   );
 };
