@@ -109,8 +109,3 @@ button {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-/* Logo Inversion */
-[data-theme="dark"] .brand-logo {
-  filter: invert(1) brightness(2);
-}

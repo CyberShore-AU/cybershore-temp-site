@@ -1,6 +1,7 @@
 import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import logo from '../assets/logo.png';
+import logoDark from '../assets/logo-dark.png';
 
 const Navbar = ({ theme, toggleTheme }) => {
   return (
@@ -33,9 +34,8 @@ const Navbar = ({ theme, toggleTheme }) => {
         }}
       >
         <img 
-          src={logo} 
+          src={theme === 'dark' ? logoDark : logo} 
           alt="CyberShore Logo" 
-          className="brand-logo"
           style={{ height: '32px', width: 'auto' }} 
         />
         CyberShore

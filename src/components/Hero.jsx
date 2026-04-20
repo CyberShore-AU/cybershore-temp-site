@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import logo from '../assets/logo.png';
+import logoDark from '../assets/logo-dark.png';
 
 const Hero = ({ theme }) => {
   return (
@@ -11,9 +12,8 @@ const Hero = ({ theme }) => {
         style={{ marginBottom: '1.5rem' }}
       >
         <img 
-          src={logo} 
+          src={theme === 'dark' ? logoDark : logo} 
           alt="CyberShore Logo" 
-          className="brand-logo"
           style={{ height: '120px', width: 'auto' }} 
         />
       </motion.div>
@@ -68,8 +68,8 @@ const Hero = ({ theme }) => {
           margin: '0 auto',
         }}
       >
-        <span style={{ whiteSpace: 'nowrap' }}>Automated hygiene.</span>{' '}
-        <span style={{ whiteSpace: 'nowrap' }}>Absolute compliance.</span>
+        <span style={{ whiteSpace: 'nowrap' }}>Cyber security</span>{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>for the rest of us.</span>
       </motion.p>
     </div>
   );
