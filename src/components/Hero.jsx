@@ -4,37 +4,36 @@ import logoDark from '../assets/logo-dark.png';
 
 const Hero = ({ theme }) => {
   return (
-    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+    <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        style={{ marginBottom: '1.5rem' }}
+        style={{ marginBottom: 'var(--space-md)' }}
       >
         <img 
           src={theme === 'dark' ? logoDark : logo} 
           alt="CyberShore Logo" 
-          style={{ height: '120px', width: 'auto' }} 
+          style={{ height: '140px', width: 'auto' }} 
         />
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         style={{
           display: 'inline-block',
-          background: 'var(--glass-bg)',
-          border: '1px solid var(--glass-border)',
-          padding: '0.5rem 1rem',
-          borderRadius: '20px',
-          fontSize: '0.8rem',
-          fontWeight: 600,
+          background: 'var(--bg-headland)',
+          border: '2px solid var(--color-primary)',
+          padding: '0.5rem 1.25rem',
+          borderRadius: '4px',
+          fontSize: '0.85rem',
+          fontWeight: 700,
           textTransform: 'uppercase',
           letterSpacing: '2px',
-          color: 'var(--accent-color)',
-          marginBottom: '2rem',
-          boxShadow: '0 0 15px rgba(100, 255, 218, 0.2)'
+          color: 'var(--color-primary)',
+          marginBottom: 'var(--space-md)',
         }}
       >
         Launching Soon
@@ -45,13 +44,11 @@ const Hero = ({ theme }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         style={{
-          fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+          fontSize: 'clamp(3rem, 10vw, 5rem)',
           fontWeight: 800,
-          marginBottom: '1rem',
-          background: 'linear-gradient(45deg, var(--text-primary), var(--accent-color))',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          whiteSpace: 'nowrap',
+          marginBottom: 'var(--space-sm)',
+          color: 'var(--text-mist)',
+          letterSpacing: '-2px',
         }}
       >
         CyberShore
@@ -62,15 +59,26 @@ const Hero = ({ theme }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         style={{
-          fontSize: '1.25rem',
-          color: 'var(--text-secondary)',
-          maxWidth: '600px',
+          fontSize: '1.5rem',
+          color: 'var(--text-spray)',
+          maxWidth: '650px',
           margin: '0 auto',
+          marginBottom: 'var(--space-lg)',
+          lineHeight: 1.4,
         }}
       >
-        <span style={{ whiteSpace: 'nowrap' }}>Cyber security</span>{' '}
-        <span style={{ whiteSpace: 'nowrap' }}>for the rest of us.</span>
+        Cyber security <span style={{ color: 'var(--text-mist)', fontWeight: 600 }}>for the rest of us.</span>
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <button className="sentinel-button">
+          Secure Your Perimeter
+        </button>
+      </motion.div>
     </div>
   );
 };

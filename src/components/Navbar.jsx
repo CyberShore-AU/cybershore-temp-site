@@ -9,15 +9,14 @@ const Navbar = ({ theme, toggleTheme }) => {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '1.5rem 2rem',
-      backgroundColor: 'var(--nav-bg)',
-      backdropFilter: 'blur(10px)',
+      padding: '1rem 2rem',
+      backgroundColor: 'var(--bg-headland)',
       position: 'fixed',
       top: 0,
       left: 0,
       width: '100%',
       zIndex: 100,
-      borderBottom: '1px solid var(--glass-border)'
+      borderBottom: '2px solid var(--border-sentinel)'
     }}>
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
@@ -27,10 +26,10 @@ const Navbar = ({ theme, toggleTheme }) => {
           display: 'flex',
           alignItems: 'center',
           gap: '12px',
-          fontSize: '1.5rem',
+          fontSize: '1.25rem',
           fontWeight: 800,
           letterSpacing: '-1px',
-          color: 'var(--accent-color)'
+          color: 'var(--text-mist)'
         }}
       >
         <img 
@@ -49,20 +48,26 @@ const Navbar = ({ theme, toggleTheme }) => {
         aria-label="Toggle light/dark mode"
         style={{
           background: 'none',
-          border: '1px solid var(--accent-color)',
-          padding: '0.5rem',
-          borderRadius: '50%',
+          border: '2px solid var(--color-primary)',
+          padding: '0.4rem',
+          borderRadius: '4px',
           cursor: 'pointer',
-          color: 'var(--accent-color)',
+          color: 'var(--color-primary)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          transition: 'all 0.3s ease'
+          transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
         }}
-        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--button-hover)'}
-        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color-primary)';
+          e.currentTarget.style.color = 'var(--bg-ocean)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = 'var(--color-primary)';
+        }}
       >
-        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
       </motion.button>
     </nav>
   );

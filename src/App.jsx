@@ -28,22 +28,23 @@ function App() {
   };
 
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <div className="coastline-bg">
-        <div className="wave" style={{ opacity: 0.1, animationDuration: '15s' }}></div>
-        <div className="wave" style={{ opacity: 0.2, animationDelay: '-5s', animationDuration: '25s' }}></div>
-        <div className="wave" style={{ opacity: 0.3, animationDelay: '-10s', animationDuration: '35s' }}></div>
+        <div className="wave" style={{ opacity: 0.1, animationDuration: '30s' }}></div>
+        <div className="wave" style={{ opacity: 0.2, animationDelay: '-10s', animationDuration: '45s' }}></div>
+        <div className="wave" style={{ opacity: 0.3, animationDelay: '-20s', animationDuration: '60s' }}></div>
       </div>
       
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       
-      <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', padding: '0 1.5rem', paddingTop: '80px' }}>
-        <div className="container" style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', paddingTop: '100px' }}>
+        <div className="container" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Hero theme={theme} />
         </div>
-        <Footer />
       </main>
-    </>
+
+      <Footer />
+    </div>
   );
 }
 

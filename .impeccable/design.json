@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-13T12:00:00Z",
+  "title": "Design System: CyberShore",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Shoreline Teal", "canonical": "oklch(85% 0.15 170)" },
+      "neutral-bg": { "role": "neutral", "displayName": "Ocean Depth", "canonical": "#0a192f" },
+      "neutral-surface": { "role": "neutral", "displayName": "Headland Blue", "canonical": "#112240" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Headline", "purpose": "Hero sections only." },
+      "body": { "displayName": "Body Copy", "purpose": "General reading." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "standard-ease", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Controlled, purposeful movement." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Sentinel Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary call to action. Sturdy and high-contrast.",
+      "html": "<button class=\"ds-btn-primary\">GET PROTECTED</button>",
+      "css": ".ds-btn-primary { background: #64ffda; color: #0a192f; padding: 12px 24px; font-weight: 700; border: none; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s; cursor: pointer; } .ds-btn-primary:hover { background: #4cd8b8; }"
+    },
+    {
+      "name": "Headland Card",
+      "kind": "card",
+      "description": "Solid container for content sections.",
+      "html": "<div class=\"ds-card\"><h3>Secure Perimeter</h3><p>Your business, protected locally.</p></div>",
+      "css": ".ds-card { background: #112240; border: 1px solid rgba(100, 255, 218, 0.1); border-radius: 8px; padding: 24px; color: #ccd6f6; } .ds-card h3 { color: #64ffda; margin-top: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shoreline Sentinel",
+    "overview": "A sturdy, watchful presence along the Australian coast. Rejects the delicate for the dependable. Spacious, clear, and focused on Safe Harbour security.",
+    "keyCharacteristics": ["Sturdy & Solid", "Coastal Contrast", "Tactile Confidence"],
+    "rules": [
+      { "name": "The 10% Beacon Rule", "body": "Shoreline Teal is used on ≤10% of any screen.", "section": "colors" },
+      { "name": "The Solid Foundation Rule", "body": "Avoid translucency on primary containers.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use solid background fills for all primary UI containers.",
+      "Do maintain high contrast between text and background."
+    ],
+    "donts": [
+      "Don't use 'hacker' clichés or neon-on-black schemes.",
+      "Don't rely on glassmorphism or high-blur transparency."
+    ]
+  }
+}
